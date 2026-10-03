@@ -3,6 +3,7 @@ import { data, useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { LoginApi } from "../state/useAction";
+import { toast } from "react-toastify";
 
 const useAuthHook = () => {
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ const useAuthHook = () => {
   };
 
   const handleLogin = (data) => {
+    toast.success("Register Sucessfully");
     dispatch(LoginApi(data));
   };
 

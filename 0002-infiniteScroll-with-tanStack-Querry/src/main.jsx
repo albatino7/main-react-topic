@@ -13,7 +13,7 @@ import Scroll from "./Scroll.jsx";
 const queryClient = new QueryClient();
 createRoot(document.getElementById("root")).render(
   <QueryClientProvider client={queryClient}>
-    <App />
-    {/* <Scroll /> */}
+    {/* <App /> */}
+    <Scroll />
   </QueryClientProvider>,
 );

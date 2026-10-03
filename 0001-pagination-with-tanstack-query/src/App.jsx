@@ -32,7 +32,7 @@ const App = () => {
           <div className="mt-10 flex items-center justify-center gap-4">
             {/* Previous */}
             <button
-              disabled={page === 0}
+              disabled={page === 1}
               onClick={() => setPage(page - 1)}
               className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 shadow-sm transition-all duration-200 hover:bg-gray-100 hover:shadow-md disabled:cursor-not-allowed disabled:opacity-40"
             >
