@@ -5,7 +5,7 @@ import RegisterPage from "../features/auth/ui/pages/RegisterPage";
 import LoginPage from "../features/auth/ui/pages/LoginPage";
 import MainRoute from "../layout/MainRoute";
 import HomePage from "../shared/ui/pages/HomePage";
-import ProductPage from "../features/products/ui/pages/productPage";
+import ProductPage from "../features/products/ui/pages/ProductPage.jsx";
 import AboutPage from "../shared/ui/pages/AboutPage";
 import { useDispatch } from "react-redux";
 import { hydartionApi } from "../features/auth/state/useAction";
@@ -25,7 +25,7 @@ const AppRoute = () => {
       element: <PublicProtected />,
       children: [
         {
-          element: "",
+          path: "",
           element: <PublicRoute />,
           children: [
             {
