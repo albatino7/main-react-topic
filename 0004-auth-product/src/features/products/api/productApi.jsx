@@ -1,12 +1,19 @@
 import { axisoInstance } from "../../../config/axisoInstance";
 
-export const getAllProduct = async (search, catgoryData) => {
+export const getAllProduct = async (
+  search,
+  catgoryData,
+  pageLimit,
+  pageData,
+) => {
   try {
-    let url = "/products";
+    const skip = (pageData - 1) * pageLimit;
+
+    let url = `/products?limit=${pageLimit}&skip=${skip}`;
     if (search) {
-      url = `/products/search?q=${search}`;
+      url = `/products/search?q=${search}&limit=${pageLimit}&skip=${skip}`;
     } else if (catgoryData) {
-      url = `/products/category/${catgoryData}`;
+      url = `/products/category/${catgoryData}?limit=${pageLimit}&skip=${skip}`;
     }
 
     const response = await axisoInstance.get(url);
